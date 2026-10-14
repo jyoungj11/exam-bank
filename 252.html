@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>2025년 제2회 정보처리기사 실기 기출복원</title>
+    <style>
+        body { font-family: 'Malgun Gothic', sans-serif; line-height: 1.6; margin: 30px; background-color: #f7f9fa; color: #333; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); position: relative; }
+        .home-btn { position: absolute; top: 30px; left: 30px; background: #3498db; color: white; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-size: 0.9em; font-weight: bold; }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 3px solid #3498db; padding-bottom: 20px; margin-bottom: 30px; }
+        h2 { color: #2c3e50; margin-top: 50px; border-bottom: 2px solid #bdc3c7; padding-bottom: 10px; }
+        .question { margin-bottom: 25px; padding: 20px; border: 1px solid #e1e8ed; border-radius: 8px; background: #ffffff; }
+        .q-title { font-weight: bold; color: #2980b9; font-size: 1.1em; margin-bottom: 10px; }
+        p { margin: 8px 0; }
+        code { background: #f1f2f6; color: #d63031; padding: 2px 6px; border-radius: 4px; font-family: Consolas, monospace; font-size: 0.95em; border: 1px solid #dfe4ea; }
+        pre { background: #fdfdfd; color: #2f3542; padding: 15px; border-radius: 6px; overflow-x: auto; font-family: Consolas, monospace; border: 1px solid #ced6e0; line-height: 1.4; }
+        .answer-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .answer-table th, .answer-table td { border: 1px solid #ced6e0; padding: 12px; text-align: left; }
+        .answer-table th { background-color: #f1f2f6; color: #2f3542; }
+        .answer-table tr:nth-child(even) { background-color: #f9f9f9; }
+        .explanation-text { font-size: 0.9em; color: #57606f; margin-top: 4px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="index.html" class="home-btn">← 메인으로</a>
+    <h1>2025년 제2회 정보처리기사 실기 기출복원 문제</h1>
+    <p style="text-align: center; color: #7f8c8d; margin-bottom: 40px;">문제를 충분히 풀어본 뒤, 페이지 하단의 <strong>정답 및 해설 모음</strong>을 참고하세요.</p>
+
+    <!-- 문제 1 -->
+    <div class="question" id="q1">
+        <div class="q-title">문제 1. 자바(Java) 배열 및 증감 연산</div>
+        <p>다음 Java 코드의 출력 값을 작성하시오.</p>
+        <pre><code>public class Test {
+    public static void main(String[] args) {
+        int[] arr = {1, 3, 5, 7, 9};
+        int sum = 0;
+        for (int i = 0; i &lt; arr.length; i++) {
+            if (arr[i] % 3 == 0) {
+                sum += arr[i];
+            }
+        }
+        System.out.print(sum);
+    }
+}</code></pre>
+    </div>
+
+    <!-- 문제 2 -->
+    <div class="question" id="q2">
+        <div class="q-title">문제 2. C언어 포인터와 배열 요소 제어</div>
+        <p>다음 C언어 코드의 출력 값을 작성하시오.</p>
+        <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    int *p = arr + 1;
+    *p += 10;
+    printf("%d, %d", arr[1], *p);
+    return 0;
+}</code></pre>
+    </div>
+
+    <!-- 문제 3 -->
+    <div class="question" id="q3">
+        <div class="q-title">문제 3. 디자인 패턴 용어</div>
+        <p>복잡한 서브시스템들에 대한 공통의 단일 인터페이스를 제공하여, 클라이언트가 서브시스템을 더 쉽게 사용할 수 있도록 구조를 제공하는 디자인 패턴의 명칭을 영문으로 작성하시오.</p>
+    </div>
+
+    <!-- 문제 4 -->
+    <div class="question" id="q4">
+        <div class="q-title">문제 4. C언어 문자열 조작 함수</div>
+        <p>다음 C언어 코드의 출력 값을 작성하시오.</p>
+        <pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+int main() {
+    char s[] = "Computer";
+    int len = strlen(s);
+    for (int i = len - 1; i &gt;= 0; i -= 2) {
+        printf("%c", s[i]);
+    }
+    return 0;
+}</code></pre>
+    </div>
+
+    <!-- 문제 5 -->
+    <div class="question" id="q5">
+        <div class="q-title">문제 5. 트랜잭션 이상(Anomaly) 현상 용어</div>
+        <p>데이터베이스 동시성 제어 시, 하나의 트랜잭션이 데이터를 수정하는 동안 다른 트랜잭션이 중간에 수정 중인 데이터를 읽어가서 잘못된 결과를 도출하는 현상으로, 나중에 원래 값으로 롤백될 때 문제가 되는 현상의 영문 약자를 쓰시오.</p>
+    </div>
+
+    <!-- 문제 6 -->
+    <div class="question" id="q6">
+        <div class="q-title">문제 6. 운영체제 CPU 스케줄링 용어</div>
+        <p>운영체제에서 프로세스 스케줄링 시, 처리 시간이 긴 프로세스가 짧은 프로세스를 대기시키는 현상인 호위 효과(Convoy Effect)를 방지할 수 있으며, 준비 큐에 도착한 순서대로 CPU를 할당하는 비선점형 스케줄링 알고리즘 명칭을 쓰시오.</p>
+    </div>
+
+    <!-- 문제 7 -->
+    <div class="question" id="q7">
+        <div class="q-title">문제 7. SQL 트랜잭션 제어 언어 (TCL)</div>
+        <p>데이터베이스에서 트랜잭션의 실행 결과를 영구적으로 데이터베이스에 반영하는 SQL 명령어와, 변경 사항을 취소하고 트랜잭션 이전 상태로 되돌리는 SQL 명령어를 각각 작성하시오.</p>
+    </div>
+
+    <!-- 문제 8 -->
+    <div class="question" id="q8">
+        <div class="q-title">문제 8. 파이썬(Python) 문자열 및 반복문 결과</div>
+        <p>다음 Python 코드의 출력 값을 작성하시오.</p>
+        <pre><code>text = "Python"
+res = ""
+for char in text:
+    if char in "aeiou":
+        continue
+    res += char
+print(res)</code></pre>
+    </div>
+
+    <!-- 문제 9 -->
+    <div class="question" id="q9">
+        <div class="q-title">문제 9. 네트워크 프로토콜 및 포트 번호</div>
+        <p>원격지의 다른 컴퓨터에 로그인하여 제어할 수 있도록 해주는 가상 터미널 프로토콜이며, 암호화 기능이 없어 보안에 취약하여 주로 SSH로 대체되는 프로토콜의 기본 포트 번호를 작성하시오.</p>
+    </div>
+
+    <!-- 문제 10 -->
+    <div class="question" id="q10">
+        <div class="q-title">문제 10. 소프트웨어 공학 결합도 유형</div>
+        <p>모듈 간의 인터페이스를 통해 자료(Data) 구조 전체가 전달되어 그 내부의 일부 필드나 요소만 사용하거나 조작할 때 발생하는 결합도 유형 명칭을 쓰시오.</p>
+    </div>
+
+    <!-- 문제 11 -->
+    <div class="question" id="q11">
+        <div class="q-title">문제 11. SQL 서브쿼리 및 집계 연산 결과</div>
+        <p>다음 SQL 실행 결과 출력되는 값을 작성하시오.</p>
+        <pre><code>SELECT MIN(SALARY) FROM EMPLOYEE WHERE DEPT = '개발';
+-- 개발 부서 직원들의 급여 데이터: 3000, 3500, 4000</code></pre>
+    </div>
+
+    <!-- 문제 12 -->
+    <div class="question" id="q12">
+        <div class="q-title">문제 12. 자바(Java) 상속과 오버라이딩 출력 결과</div>
+        <p>다음 Java 코드의 출력 값을 작성하시오.</p>
+        <pre><code>class A {
+    int val = 10;
+    void print() { System.out.print("A"); }
+}
+class B extends A {
+    int val = 20;
+    void print() { System.out.print("B"); }
+}
+public class Test {
+    public static void main(String[] args) {
+        A obj = new B();
+        obj.print();
+        System.out.print(obj.val);
+    }
+}</code></pre>
+    </div>
+
+    <!-- 문제 13 -->
+    <div class="question" id="q13">
+        <div class="q-title">문제 13. 애플리케이션 보안 취약점 용어</div>
+        <p>소프트웨어 개발 보안 취약점 중 하나로, 검증되지 않은 사용자 입력값을 경로 탐색 문자(<code>../</code> 등)를 포함하여 전달함으로써 시스템의 보호된 파일이나 디렉토리에 무단으로 접근할 수 있게 되는 취약점 명칭을 영문으로 쓰시오.</p>
+    </div>
+
+    <!-- 문제 14 -->
+    <div class="question" id="q14">
+        <div class="q-title">문제 14. 네트워크 서브네팅 및 브로드캐스트 주소</div>
+        <p>IP 주소가 <code>192.168.10.15</code>이고 서브넷 마스크가 <code>255.255.255.240</code>일 때, 해당 서브넷의 **브로드캐스트 IP 주소**를 구하시오.</p>
+    </div>
+
+    <!-- 문제 15 -->
+    <div class="question" id="q15">
+        <div class="q-title">문제 15. 응집도(Cohesion) 유형 명칭</div>
+        <p>모듈 내부의 구성 요소들이 입력 데이터와 출력 데이터를 서로 공유하면서 순차적으로 처리되는 형태의 응집도 유형 명칭을 쓰시오.</p>
+    </div>
+
+    <!-- 문제 16 -->
+    <div class="question" id="q16">
+        <div class="q-title">문제 16. C언어 다중 제어문 출력 결과</div>
+        <p>다음 C언어 코드의 출력 값을 작성하시오.</p>
+        <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int acc = 0;
+    for (int i = 1; i &lt;= 3; i++) {
+        for (int j = 1; j &lt;= i; j++) {
+            acc += (i * j);
+        }
+    }
+    printf("%d", acc);
+    return 0;
+}</code></pre>
+    </div>
+
+    <!-- 문제 17 -->
+    <div class="question" id="q17">
+        <div class="q-title">문제 17. 소프트웨어 테스트 커버리지 기준</div>
+        <p>화이트박스 테스트 검증 기준 중 하나로, 프로그램 내의 모든 실행 가능한 문장(Statement)들이 적어도 한 번은 수행되도록 테스트하는 가장 기본적인 커버리지 기법 명칭을 쓰시오.</p>
+    </div>
+
+    <!-- 문제 18 -->
+    <div class="question" id="q18">
+        <div class="q-title">문제 18. 자바(Java) 인터페이스 구현 결과</div>
+        <p>다음 Java 코드의 출력 값을 작성하시오.</p>
+        <pre><code>interface Action {
+    void exec();
+}
+class Run implements Action {
+    public void exec() { System.out.print("Run"); }
+}
+public class Test {
+    public static void main(String[] args) {
+        Action a = new Run();
+        a.exec();
+    }
+}</code></pre>
+    </div>
+
+    <!-- 문제 19 -->
+    <div class="question" id="q19">
+        <div class="q-title">문제 19. 파이썬(Python) 딕셔너리 키-값 조작</div>
+        <p>다음 Python 코드의 출력 값을 작성하시오.</p>
+        <pre><code>score = {'kor': 90, 'eng': 85, 'mat': 95}
+score['eng'] = 95
+print(sum(score.values()))</code></pre>
+    </div>
+
+    <!-- 문제 20 -->
+    <div class="question" id="q20">
+        <div class="q-title">문제 20. 정보보안 암호화 알고리즘 (비대칭키)</div>
+        <p>대표적인 공개키(비대칭키) 암호화 알고리즘 중 하나로, 큰 숫자를 소인수분해하기 어려운 수학적 성질을 이용하여 안전한 통신과 전자서명을 제공하는 알고리즘의 영문 약자를 쓰시오.</p>
+    </div>
+
+
+    <!-- ================= 정답 및 해설 영역 ================= -->
+    <h2>정답 및 해설 모음</h2>
+    <table class="answer-table">
+        <tr>
+            <th style="width: 10%;">문항</th>
+            <th style="width: 35%;">정답</th>
+            <th style="width: 55%;">해설</th>
+        </tr>
+        <tr>
+            <td>1번</td>
+            <td><strong>12</strong></td>
+            <td><div class="explanation-text">배열 요소 중 3의 배수인 3과 9의 합인 12가 누적 출력됩니다.</div></td>
+        </tr>
+        <tr>
+            <td>2번</td>
+            <td><strong>20, 20</strong></td>
+            <td><div class="explanation-text">포인터 p는 arr[1]을 가리키며 *p에 10을 더해 20이 되므로 arr[1]과 *p 모두 20이 됩니다.</div></td>
+        </tr>
+        <tr>
+            <td>3번</td>
+            <td><strong>Facade (퍼사드 패턴)</strong></td>
+            <td><div class="explanation-text">복잡한 서브시스템에 대한 단일 인터페이스를 제공하는 퍼사드 패턴입니다.</div></td>
+        </tr>
+        <tr>
+            <td>4번</td>
+            <td><strong>rutoC</strong></td>
+            <td><div class="explanation-text">문자열 "Computer"의 마지막 문자('r')부터 역순으로 2칸씩 간격으로 문자를 추출하여 출력합니다.</div></td>
+        </tr>
+        <tr>
+            <td>5번</td>
+            <td><strong>DIR (Dirty Read)</strong></td>
+            <td><div class="explanation-text">커밋되지 않은 수정 중인 데이터를 읽어 발생하는 비정상 읽기 현상입니다.</div></td>
+        </tr>
+        <tr>
+            <td>6번</td>
+            <td><strong>FIFO (또는 FCFS)</strong></td>
+            <td><div class="explanation-text">준비 큐에 도착한 순서대로 CPU를 할당하는 비선점형 알고리즘입니다.</div></td>
+        </tr>
+        <tr>
+            <td>7번</td>
+            <td><strong>반영: COMMIT / 취소: ROLLBACK</strong></td>
+            <td><div class="explanation-text">트랜잭션 제어 언어(TCL)의 반영 및 복원 명령어입니다.</div></td>
+        </tr>
+        <tr>
+            <td>8번</td>
+            <td><strong>Pythn</strong></td>
+            <td><div class="explanation-text">모음('o')을 제외한 문자들('P', 'y', 't', 'h', 'n')이 차례대로 결합됩니다.</div></td>
+        </tr>
+        <tr>
+            <td>9번</td>
+            <td><strong>23</strong></td>
+            <td><div class="explanation-text">Telnet 프로토콜의 기본 포트 번호는 23번입니다.</div></td>
+        </tr>
+        <tr>
+            <td>10번</td>
+            <td><strong>스탬프 결합도 (Stamp Coupling)</strong></td>
+            <td><div class="explanation-text">자료구조 전체가 전달되어 일부만 사용하는 결합도 형태입니다.</div></td>
+        </tr>
+        <tr>
+            <td>11번</td>
+            <td><strong>3000</strong></td>
+            <td><div class="explanation-text">개발 부서 직원들의 급여 중 최솟값인 3000이 출력됩니다.</div></td>
+        </tr>
+        <tr>
+            <td>12번</td>
+            <td><strong>B10</strong></td>
+            <td><div class="explanation-text">메소드는 오버라이딩에 의해 자식(B)의 <code>print()</code>가 실행되어 "B", 변수는 참조 타입(A)을 따르므로 <code>val = 10</code>이 되어 "B10"이 출력됩니다.</div></td>
+        </tr>
+        <tr>
+            <td>13번</td>
+            <td><strong>Path Traversal (또는 Directory Traversal)</strong></td>
+            <td><div class="explanation-text">상위 경로 문자 조작을 통해 보호된 파일에 접근하는 보안 취약점입니다.</div></td>
+        </tr>
+        <tr>
+            <td>14번</td>
+            <td><strong>192.168.10.31</strong></td>
+            <td><div class="explanation-text">서브넷 마스크 240(블록 크기 16) 기준, IP 15가 속한 대역(0~15)의 마지막 주소는 192.168.10.31입니다.</div></td>
+        </tr>
+        <tr>
+            <td>15번</td>
+            <td><strong>교환적 응집도 (Communicational Cohesion) 또는 순차적 응집도</strong></td>
+            <td><div class="explanation-text">데이터를 공유하며 처리하는 응집도 유형입니다.</div></td>
+        </tr>
+        <tr>
+            <td>16번</td>
+            <td><strong>20</strong></td>
+            <td><div class="explanation-text">i=1:(1*1=1), i=2:(1*1 + 2*2=5), i=3:(1+4 + 3*3=14)의 총합인 20이 누적됩니다.</div></td>
+        </tr>
+        <tr>
+            <td>17번</td>
+            <td><strong>구문 커버리지 (Statement Coverage)</strong></td>
+            <td><div class="explanation-text">모든 실행 가능한 문장이 적어도 한 번은 수행되도록 하는 테스트 커버리지입니다.</div></td>
+        </tr>
+        <tr>
+            <td>18번</td>
+            <td><strong>Run</strong></td>
+            <td><div class="explanation-text">인터페이스를 구현한 Run 클래스의 <code>exec()</code> 메서드가 실행되어 "Run"이 출력됩니다.</div></td>
+        </tr>
+        <tr>
+            <td>19번</td>
+            <td><strong>270</strong></td>
+            <td><div class="explanation-text">eng 값이 95로 갱신되어 각 과목 점수(90 + 95 + 85)의 총합은 270이 됩니다.</div></td>
+        </tr>
+        <tr>
+            <td>20번</td>
+            <td><strong>RSA</strong></td>
+            <td><div class="explanation-text">소인수분해 수학적 원리를 이용한 대표적인 공개키 암호화 알고리즘입니다.</div></td>
+        </tr>
+    </table>
+
+</div>
+</body>
+</html>

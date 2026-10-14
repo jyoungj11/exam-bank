@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>2024년 제2회 정보처리기사 실기 기출복원</title>
+    <style>
+        body { font-family: 'Malgun Gothic', sans-serif; line-height: 1.6; margin: 30px; background-color: #f7f9fa; color: #333; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); position: relative; }
+        .home-btn { position: absolute; top: 30px; left: 30px; background: #3498db; color: white; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-size: 0.9em; font-weight: bold; }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 3px solid #3498db; padding-bottom: 20px; margin-bottom: 30px; }
+        h2 { color: #2c3e50; margin-top: 50px; border-bottom: 2px solid #bdc3c7; padding-bottom: 10px; }
+        .question { margin-bottom: 25px; padding: 20px; border: 1px solid #e1e8ed; border-radius: 8px; background: #ffffff; }
+        .q-title { font-weight: bold; color: #2980b9; font-size: 1.1em; margin-bottom: 10px; }
+        p { margin: 8px 0; }
+        code { background: #f1f2f6; color: #d63031; padding: 2px 6px; border-radius: 4px; font-family: Consolas, monospace; font-size: 0.95em; border: 1px solid #dfe4ea; }
+        pre { background: #fdfdfd; color: #2f3542; padding: 15px; border-radius: 6px; overflow-x: auto; font-family: Consolas, monospace; border: 1px solid #ced6e0; line-height: 1.4; }
+        .answer-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .answer-table th, .answer-table td { border: 1px solid #ced6e0; padding: 12px; text-align: left; }
+        .answer-table th { background-color: #f1f2f6; color: #2f3542; }
+        .answer-table tr:nth-child(even) { background-color: #f9f9f9; }
+        .explanation-text { font-size: 0.9em; color: #57606f; margin-top: 4px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="index.html" class="home-btn">← 메인으로</a>
+    <h1>2024년 제2회 정보처리기사 실기 기출복원 문제</h1>
+    <p style="text-align: center; color: #7f8c8d; margin-bottom: 40px;">문제를 충분히 풀어본 뒤, 페이지 하단의 <strong>정답 및 해설 모음</strong>을 참고하세요.</p>
+
+    <!-- 문제 1 -->
+    <div class="question" id="q1">
+        <div class="q-title">문제 1. 자바(Java) 재귀 함수 문자열 처리</div>
+        <p>다음 Java 코드의 출력 값을 작성하시오.</p>
+        <pre><code>class Test {
+    static String rf(String s, int idx) {
+        if (idx &lt; 0) return "";
+        return s.charAt(idx) + rf(s, idx - 1);
+    }
+    public static void main(String[] args) {
+        String str = "Information";
+        System.out.print(rf(str, 3));
+    }
+}</code></pre>
+    </div>
+
+    <!-- 문제 2 -->
+    <div class="question" id="q2">
+        <div class="q-title">문제 2. C언어 포인터 배열 연산</div>
+        <p>다음 C언어 코드의 출력 값을 작성하시오.</p>
+        <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    int *p = arr;
+    p += 2;
+    printf("%d, %d", *p, *(p+1));
+    return 0;
+}</code></pre>
+    </div>
+
+    <!-- 문제 3 -->
+    <div class="question" id="q3">
+        <div class="q-title">문제 3. 디자인 패턴 용어</div>
+        <p>객체의 상태가 바뀔 때 마침내 연관된 객체들에게 변경 사항을 통보하여 자동적으로 갱신될 수 있도록 하는 일대다(1:N) 의존 관계를 정의하는 디자인 패턴의 명칭을 영문으로 작성하시오.</p>
+    </div>
+
+    <!-- 문제 4 -->
+    <div class="question" id="q4">
+        <div class="q-title">문제 4. C언어 구조체 및 연산</div>
+        <p>다음 C언어 코드의 출력 값을 작성하시오.</p>
+        <pre><code>#include &lt;stdio.h&gt;
+struct Car {
+    char name[20];
+    int speed;
+};
+int main() {
+    struct Car c = {"ioniq", 100};
+    struct Car *p = &c;
+    p-&gt;speed += 20;
+    printf("%s %d", p-&gt;name, (*p).speed);
+    return 0;
+}</code></pre>
+    </div>
+
+    <!-- 문제 5 -->
+    <div class="question" id="q5">
+        <div class="q-title">문제 5. 데이터베이스 트랜잭션 성질 (ACID)</div>
+        <p>다음 설명에 해당하는 트랜잭션의 성질(ACID) 한글 명칭을 쓰시오.</p>
+        <ul>
+            <li>트랜잭션의 연산은 데이터베이스에 모두 반영되든지 아니면 전혀 반영되지 않아야 한다.</li>
+        </ul>
+    </div>
+
+    <!-- 문제 6 -->
+    <div class="question" id="q6">
+        <div class="q-title">문제 6. 운영체제 스케줄링 알고리즘</div>
+        <p>준비 큐(Ready Queue)에 도착한 프로세스들의 버스트 타임(Burst Time)을 바탕으로 대기 시간을 최소화하는 비선점형 스케줄링 기법으로, 작업이 완료되는 데 걸리는 시간이 짧은 것부터 우선 처리하는 알고리즘 영문 약자 명칭을 쓰시오.</p>
+    </div>
+
+    <!-- 문제 7 -->
+    <div class="question" id="q7">
+        <div class="q-title">문제 7. SQL 뷰(View) 용어</div>
+        <p>데이터베이스에서 사용자에게 기본 테이블의 일부 데이터만 보이도록 숨기거나 조인된 결과를 하나의 가상 테이블로 제공하는 객체 명칭을 쓰시오.</p>
+    </div>
+
+    <!-- 문제 8 -->
+    <div class="question" id="q8">
+        <div class="q-title">문제 8. 파이썬(Python) 리스트 슬라이싱</div>
+        <p>다음 Python 코드의 출력 값을 작성하시오.</p>
+        <pre><code>li = [1, 2, 3, 4, 5]
+print(li[1:4])</code></pre>
+    </div>
+
+    <!-- 문제 9 -->
+    <div class="question" id="q9">
+        <div class="q-title">문제 9. 응용 계층 프로토콜과 기본 포트 번호</div>
+        <p>다음 설명에 해당하는 네트워크 프로토콜 명칭을 영문 약자로 작성하시오.</p>
+        <ul>
+            <li>TCP/IP 네트워크 상에서 도메인 이름과 IP 주소를 서로 변환해 주는 분산 데이터베이스 시스템이다.</li>
+            <li>기본 포트로 UDP 53번 포트를 사용한다.</li>
+        </ul>
+    </div>
+
+    <!-- 문제 10 -->
+    <div class="question" id="q10">
+        <div class="q-title">문제 10. 소프트웨어 개발 방법론 용어</div>
+        <p>애자일(Agile) 소프트웨어 개발 프레임워크 중 하나로, 짧은 개발 주기를 반복(Sprint)하며 매일 15분씩 스탠드업 미팅을 진행하는 대표적인 방법론 명칭을 쓰시오.</p>
+    </div>
+
+    <!-- 문제 11 -->
+    <div class="question" id="q11">
+        <div class="q-title">문제 11. SQL GROUP BY 및 집계 함수</div>
+        <p>다음 SQL 실행 결과 출력되는 데이터 중 조건에 부합하는 행의 개수를 쓰시오.</p>
+        <pre><code>SELECT DEPARTMENT, COUNT(*) FROM EMPLOYEE GROUP BY DEPARTMENT HAVING COUNT(*) &gt;= 2;</code></pre>
+    </div>
+
+    <!-- 문제 12 (보완됨) -->
+    <div class="question" id="q12">
+        <div class="q-title">문제 12. 자바(Java) 상속 및 다형성 출력 결과</div>
+        <p>다음 Java 코드의 출력 값을 작성하시오.</p>
+        <pre><code>class Parent {
+    int x = 10;
+    void show() {
+        System.out.print("P");
+    }
+}
+class Child extends Parent {
+    int x = 20;
+    void show() {
+        System.out.print("C");
+    }
+}
+public class Test {
+    public static void main(String[] args) {
+        Parent obj = new Child();
+        obj.show();
+        System.out.print(obj.x);
+    }
+}</code></pre>
+    </div>
+
+    <!-- 문제 13 -->
+    <div class="question" id="q13">
+        <div class="q-title">문제 13. 애플리케이션 보안 약점 용어</div>
+        <p>소프트웨어 보안 취약점 중 하나로, 사용자 입력 값이 검증되지 않은 채 SQL 쿼리에 그대로 포함되어 DB 정보가 유출되거나 조작되는 보안 약점 명칭을 영문으로 쓰시오.</p>
+    </div>
+
+    <!-- 문제 14 (보완됨) -->
+    <div class="question" id="q14">
+        <div class="q-title">문제 14. 네트워크 IP 및 서브넷 마스크 계산</div>
+        <p>IP 주소가 <code>192.168.1.100</code>이고 서브넷 마스크가 <code>255.255.255.192</code>일 때, 해당 호스트가 속한 **네트워크 주소**를 구하시오.</p>
+    </div>
+
+    <!-- 문제 15 -->
+    <div class="question" id="q15">
+        <div class="q-title">문제 15. 결합도(Coupling) 유형</div>
+        <p>모듈 간의 인터페이스로 제어 요소(Control Flag)가 전달되어 다른 모듈 내부의 실행 흐름을 제어하는 결합도 유형 명칭을 쓰시오.</p>
+    </div>
+
+    <!-- 문제 16 -->
+    <div class="question" id="q16">
+        <div class="q-title">문제 16. C언어 다중 반복문 출력 결과</div>
+        <p>다음 C언어 코드의 출력 값을 작성하시오.</p>
+        <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int sum = 0;
+    for(int i=1; i&lt;=5; i++) {
+        for(int j=1; j&lt;=i; j++) {
+            sum += j;
+        }
+    }
+    printf("%d", sum);
+    return 0;
+}</code></pre>
+    </div>
+
+    <!-- 문제 17 -->
+    <div class="question" id="q17">
+        <div class="q-title">문제 17. 소프트웨어 테스트 용어</div>
+        <p>단위 테스트가 완료된 모듈들을 결합하여 인터페이스 간 상호 작용을 검증하는 테스트 단계로, 하향식(Top-down)과 상향식(Bottom-up) 방식으로 나뉘는 테스트 종류를 쓰시오.</p>
+    </div>
+
+    <!-- 문제 18 -->
+    <div class="question" id="q18">
+        <div class="q-title">문제 18. 자바(Java) 배열 예외 처리 클래스</div>
+        <p>다음 Java 코드 실행 시 배열의 허용 범위를 벗어난 인덱스에 접근할 때 발생하는 예외(Exception) 클래스 명칭을 쓰시오.</p>
+        <pre><code>int[] arr = new int[3];
+arr[5] = 10;</code></pre>
+    </div>
+
+    <!-- 문제 19 -->
+    <div class="question" id="q19">
+        <div class="q-title">문제 19. 파이썬(Python) 딕셔너리 연산</div>
+        <p>다음 Python 코드의 출력 값을 작성하시오.</p>
+        <pre><code>d = {'a': 1, 'b': 2, 'c': 3}
+print(d.get('b', 0) + d.get('d', 5))</code></pre>
+    </div>
+
+    <!-- 문제 20 -->
+    <div class="question" id="q20">
+        <div class="q-title">문제 20. 정보보안 암호화 알고리즘 용어</div>
+        <p>대칭키 암호화 방식 중 블록 암호화 알고리즘의 하나로, 64비트 블록 크기와 56비트의 유효 키 길이를 가지는 미국 표준 암호화 알고리즘 영문 약자를 쓰시오.</p>
+    </div>
+
+
+    <!-- ================= 정답 및 해설 영역 ================= -->
+    <h2>정답 및 해설 모음</h2>
+    <table class="answer-table">
+        <tr>
+            <th style="width: 10%;">문항</th>
+            <th style="width: 35%;">정답</th>
+            <th style="width: 55%;">해설</th>
+        </tr>
+        <tr>
+            <td>1번</td>
+            <td><strong>rofn</strong></td>
+            <td><div class="explanation-text">인덱스 3('o')부터 역순으로 0번 인덱스까지 문자를 추출하여 결합합니다.</div></td>
+        </tr>
+        <tr>
+            <td>2번</td>
+            <td><strong>30, 40</strong></td>
+            <td><div class="explanation-text">포인터 주소가 2칸 증가하여 arr[2]를 가리키므로 *p는 30, *(p+1)은 40이 됩니다.</div></td>
+        </tr>
+        <tr>
+            <td>3번</td>
+            <td><strong>Observer</strong></td>
+            <td><div class="explanation-text">객체 상태 변화를 다른 객체에 통보하는 옵저버 패턴입니다.</div></td>
+        </tr>
+        <tr>
+            <td>4번</td>
+            <td><strong>ioniq 120</strong></td>
+            <td><div class="explanation-text">구조체 포인터를 통해 speed가 120으로 갱신되어 출력됩니다.</div></td>
+        </tr>
+        <tr>
+            <td>5번</td>
+            <td><strong>원자성</strong></td>
+            <td><div class="explanation-text">트랜잭션 연산의 전부 반영 또는 전부 미반영 성질입니다.</div></td>
+        </tr>
+        <tr>
+            <td>6번</td>
+            <td><strong>SJF</strong></td>
+            <td><div class="explanation-text">실행 시간이 가장 짧은 프로세스부터 우선 처리하는 비선점형 알고리즘입니다.</div></td>
+        </tr>
+        <tr>
+            <td>7번</td>
+            <td><strong>VIEW (뷰)</strong></td>
+            <td><div class="explanation-text">기본 테이블에서 유도된 가상 테이블입니다.</div></td>
+        </tr>
+        <tr>
+            <td>8번</td>
+            <td><strong>[2, 3, 4]</strong></td>
+            <td><div class="explanation-text">파이썬 슬라이싱 인덱스 1 이상 4 미만 범위의 요소입니다.</div></td>
+        </tr>
+        <tr>
+            <td>9번</td>
+            <td><strong>DNS</strong></td>
+            <td><div class="explanation-text">도메인 이름과 IP를 변환하는 프로토콜입니다.</div></td>
+        </tr>
+        <tr>
+            <td>10번</td>
+            <td><strong>Scrum (스크럼)</strong></td>
+            <td><div class="explanation-text">스프린트와 일일 회의를 특징으로 하는 애자일 방법론입니다.</div></td>
+        </tr>
+        <tr>
+            <td>11번</td>
+            <td><strong>2개 (또는 결과 행 수)</strong></td>
+            <td><div class="explanation-text">그룹별 카운트 조건(>= 2)을 만족하는 행 결과입니다.</div></td>
+        </tr>
+        <tr>
+            <td>12번</td>
+            <td><strong>C10</strong></td>
+            <td><div class="explanation-text">메소드는 오버라이딩에 의해 자식(Child)의 <code>show()</code>가 실행되어 "C"가 출력되고, 멤버 변수는 객체 타입(Parent)을 따르므로 <code>x = 10</code>이 되어 "C10"이 출력됩니다.</div></td>
+        </tr>
+        <tr>
+            <td>13번</td>
+            <td><strong>SQL Injection</strong></td>
+            <td><div class="explanation-text">입력값 검증 부재로 인한 SQL 삽입 취약점입니다.</div></td>
+        </tr>
+        <tr>
+            <td>14번</td>
+            <td><strong>192.168.1.64</strong></td>
+            <td><div class="explanation-text">서브넷 마스크 255.255.255.192는 마지막 옥텟이 11000000(대역 크기 64)입니다. IP 100은 64~127 대역에 속하므로 네트워크 주소는 192.168.1.64가 됩니다.</div></td>
+        </tr>
+        <tr>
+            <td>15번</td>
+            <td><strong>제어 결합도</strong></td>
+            <td><div class="explanation-text">제어 요소에 의해 흐름이 결정되는 결합도 형태입니다.</div></td>
+        </tr>
+        <tr>
+            <td>16번</td>
+            <td><strong>35</strong></td>
+            <td><div class="explanation-text">중첩 반복문 안에서 각 단계별 1부터 i까지의 합이 누적됩니다.</div></td>
+        </tr>
+        <tr>
+            <td>17번</td>
+            <td><strong>통합 테스트</strong></td>
+            <td><div class="explanation-text">모듈 간의 상호작용을 검증하는 테스트 단계입니다.</div></td>
+        </tr>
+        <tr>
+            <td>18번</td>
+            <td><strong>ArrayIndexOutOfBoundsException</strong></td>
+            <td><div class="explanation-text">배열 크기를 초과한 인덱스 접근 시 발생하는 예외입니다.</div></td>
+        </tr>
+        <tr>
+            <td>19번</td>
+            <td><strong>7</strong></td>
+            <td><div class="explanation-text">d.get('b', 0)은 2, d.get('d', 5)는 5를 반환하여 합산 결과 7이 됩니다.</div></td>
+        </tr>
+        <tr>
+            <td>20번</td>
+            <td><strong>DES</strong></td>
+            <td><div class="explanation-text">64비트 블록과 56비트 키를 사용하는 대칭키 암호화 표준입니다.</div></td>
+        </tr>
+    </table>
+
+</div>
+</body>
+</html>

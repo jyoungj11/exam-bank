@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>2024년 제3회 정보처리기사 실기 기출복원</title>
+    <style>
+        body { font-family: 'Malgun Gothic', sans-serif; line-height: 1.6; margin: 30px; background-color: #f7f9fa; color: #333; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); position: relative; }
+        .home-btn { position: absolute; top: 30px; left: 30px; background: #3498db; color: white; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-size: 0.9em; font-weight: bold; }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 3px solid #3498db; padding-bottom: 20px; margin-bottom: 30px; }
+        h2 { color: #2c3e50; margin-top: 50px; border-bottom: 2px solid #bdc3c7; padding-bottom: 10px; }
+        .question { margin-bottom: 25px; padding: 20px; border: 1px solid #e1e8ed; border-radius: 8px; background: #ffffff; }
+        .q-title { font-weight: bold; color: #2980b9; font-size: 1.1em; margin-bottom: 10px; }
+        p { margin: 8px 0; }
+        code { background: #f1f2f6; color: #d63031; padding: 2px 6px; border-radius: 4px; font-family: Consolas, monospace; font-size: 0.95em; border: 1px solid #dfe4ea; }
+        pre { background: #fdfdfd; color: #2f3542; padding: 15px; border-radius: 6px; overflow-x: auto; font-family: Consolas, monospace; border: 1px solid #ced6e0; line-height: 1.4; }
+        .answer-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .answer-table th, .answer-table td { border: 1px solid #ced6e0; padding: 12px; text-align: left; }
+        .answer-table th { background-color: #f1f2f6; color: #2f3542; }
+        .answer-table tr:nth-child(even) { background-color: #f9f9f9; }
+        .explanation-text { font-size: 0.9em; color: #57606f; margin-top: 4px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="index.html" class="home-btn">← 메인으로</a>
+    <h1>2024년 제3회 정보처리기사 실기 기출복원 문제</h1>
+    <p style="text-align: center; color: #7f8c8d; margin-bottom: 40px;">문제를 충분히 풀어본 뒤, 페이지 하단의 <strong>정답 및 해설 모음</strong>을 참고하세요.</p>
+
+    <!-- 문제 1 -->
+    <div class="question" id="q1">
+        <div class="q-title">문제 1. 자바(Java) 반복문 및 배열 제어</div>
+        <p>다음 Java 코드의 출력 값을 작성하시오.</p>
+        <pre><code>public class Test {
+    public static void main(String[] args) {
+        int[] a = {1, 2, 3, 4, 5};
+        int sum = 0;
+        for (int i = 0; i &lt; a.length; i++) {
+            if (a[i] % 2 == 0) {
+                sum += a[i];
+            }
+        }
+        System.out.print(sum);
+    }
+}</code></pre>
+    </div>
+
+    <!-- 문제 2 -->
+    <div class="question" id="q2">
+        <div class="q-title">문제 2. C언어 포인터 연산</div>
+        <p>다음 C언어 코드의 출력 값을 작성하시오.</p>
+        <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int arr[3] = {5, 10, 15};
+    int *ptr = arr;
+    *(ptr + 1) += 5;
+    ptr++;
+    printf("%d, %d", *ptr, arr[1]);
+    return 0;
+}</code></pre>
+    </div>
+
+    <!-- 문제 3 -->
+    <div class="question" id="q3">
+        <div class="q-title">문제 3. 디자인 패턴 용어</div>
+        <p>생성 디자인 패턴의 하나로, 객체를 생성할 때 어떤 클래스의 인스턴스를 만들 것인지 서브 클래스가 결정하도록 하는 패턴으로, 팩토리 메서드(Factory Method) 패턴이라고도 불리는 디자인 패턴의 명칭을 영문으로 작성하시오.</p>
+    </div>
+
+    <!-- 문제 4 -->
+    <div class="question" id="q4">
+        <div class="q-title">문제 4. C언어 문자열 함수</div>
+        <p>다음 C언어 코드의 출력 값을 작성하시오.</p>
+        <pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+int main() {
+    char str1[20] = "Information";
+    char str2[20] = "Security";
+    strcat(str1, str2);
+    printf("%d", strlen(str1));
+    return 0;
+}</code></pre>
+    </div>
+
+    <!-- 문제 5 -->
+    <div class="question" id="q5">
+        <div class="q-title">문제 5. 트랜잭션 회복(Recovery) 기법 용어</div>
+        <p>데이터베이스 회복 기법 중 로그를 기반으로 트랜잭션이 시작될 때부터 완료(Commit)될 때까지의 변경 내용을 기록해 두었다가, 장애 발생 시 가장 최근에 저장된 체크포인트(Checkpoint) 이후의 로그를 분석하여 복구하는 기법 명칭을 쓰시오.</p>
+    </div>
+
+    <!-- 문제 6 -->
+    <div class="question" id="q6">
+        <div class="q-title">문제 6. 운영체제 프로세스 상태 전이</div>
+        <p>운영체제에서 프로세스가 CPU를 할당받아 실행되다가 할당된 시간(Time Slice)이 만료되어 준비 큐(Ready Queue)로 돌아가는 프로세스 상태 전이(State Transition) 명칭을 쓰시오.</p>
+    </div>
+
+    <!-- 문제 7 -->
+    <div class="question" id="q7">
+        <div class="q-title">문제 7. SQL DCL(데이터 제어 언어)</div>
+        <p>데이터베이스 사용자에게 권한을 부여할 때 사용하는 SQL 명령어와, 부여된 권한을 회수할 때 사용하는 SQL 명령어를 각각 작성하시오.</p>
+    </div>
+
+    <!-- 문제 8 -->
+    <div class="question" id="q8">
+        <div class="q-title">문제 8. 파이썬(Python) 반복문 출력 결과</div>
+        <p>다음 Python 코드의 출력 값을 작성하시오.</p>
+        <pre><code>res = 0
+for i in range(1, 6):
+    if i % 2 != 0:
+        res += i
+print(res)</code></pre>
+    </div>
+
+    <!-- 문제 9 -->
+    <div class="question" id="q9">
+        <div class="q-title">문제 9. 네트워크 프로토콜 용어</div>
+        <p>전송 계층(Transport Layer)에 위치하며, 비연결형이고 신뢰성이 낮지만 속도가 빨라 실시간 스트리밍이나 DNS 등에 주로 사용되는 프로토콜 영문 약자를 쓰시오.</p>
+    </div>
+
+    <!-- 문제 10 -->
+    <div class="question" id="q10">
+        <div class="q-title">문제 10. 소프트웨어 공학 응집도(Cohesion)</div>
+        <p>모듈 안의 요소들이 서로 다른 기능을 수행하더라도 동일한 시간대(Initialization, Cleanup 등)에 함께 실행되는 경우의 응집도 유형 명칭을 쓰시오.</p>
+    </div>
+
+    <!-- 문제 11 -->
+    <div class="question" id="q11">
+        <div class="q-title">문제 11. SQL JOIN 및 집계 결과</div>
+        <p>다음 SQL 실행 결과 출력되는 행의 개수를 쓰시오.</p>
+        <pre><code>SELECT A.ID FROM DEPT A JOIN EMP B ON A.ID = B.DEPT_ID;</code></pre>
+    </div>
+
+    <!-- 문제 12 -->
+    <div class="question" id="q12">
+        <div class="q-title">문제 12. 자바(Java) 상속 및 생성자 호출</div>
+        <p>다음 Java 코드의 출력 값을 작성하시오.</p>
+        <pre><code>class A {
+    A() { System.out.print("A"); }
+}
+class B extends A {
+    B() { System.out.print("B"); }
+}
+public class Test {
+    public static void main(String[] args) {
+        B obj = new B();
+    }
+}</code></pre>
+    </div>
+
+    <!-- 문제 13 -->
+    <div class="question" id="q13">
+        <div class="q-title">문제 13. 애플리케이션 보안 취약점 용어</div>
+        <p>웹 애플리케이션 보안 취약점 중 하나로, 공격자가 입력 창에 악의적인 스크립트를 삽입하여 사용자의 웹 브라우저에서 실행되도록 함으로써 세션을 탈취하거나 정보를 유출하는 공격 명칭의 영문 약자를 쓰시오.</p>
+    </div>
+
+    <!-- 문제 14 -->
+    <div class="question" id="q14">
+        <div class="q-title">문제 14. 네트워크 IP 및 클래스 구분</div>
+        <p>IPv4 주소 체계에서 <code>172.16.0.0 ~ 172.31.255.255</code> 대역이 속하는 사설 IP 주소 클래스(Class) 명칭을 쓰시오.</p>
+    </div>
+
+    <!-- 문제 15 -->
+    <div class="question" id="q15">
+        <div class="q-title">문제 15. 결합도(Coupling) 유형</div>
+        <p>모듈 간의 인터페이스로 데이터 구조(파라미터 등) 전체가 전달되어 그 내부의 일부 데이터만 사용하거나 조작할 때의 결합도 유형 명칭을 쓰시오.</p>
+    </div>
+
+    <!-- 문제 16 -->
+    <div class="question" id="q16">
+        <div class="q-title">문제 16. C언어 다중 조건문 및 비트 연산</div>
+        <p>다음 C언어 코드의 출력 값을 작성하시오.</p>
+        <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    int x = 5, y = 10;
+    if (x &gt; 3 &amp;&amp; y &lt; 15) {
+        x += 5;
+    } else {
+        y -= 5;
+    }
+    printf("%d", x * y);
+    return 0;
+}</code></pre>
+    </div>
+
+    <!-- 문제 17 -->
+    <div class="question" id="q17">
+        <div class="q-title">문제 17. 소프트웨어 테스트 용어</div>
+        <p>화이트박스 테스트 검증 기준 중 하나로, 프로그램 내의 모든 결정(Decision) 문의 조건식 안의 개별 조건식(Condition)이 참과 거짓의 결과를 한 번 이상 갖도록 테스트하는 커버리지 기법 명칭을 쓰시오.</p>
+    </div>
+
+    <!-- 문제 18 -->
+    <div class="question" id="q18">
+        <div class="q-title">문제 18. 자바(Java) 문자열 비교 결과</div>
+        <p>다음 Java 코드의 출력 값을 작성하시오.</p>
+        <pre><code>public class Test {
+    public static void main(String[] args) {
+        String s1 = "Hello";
+        String s2 = new String("Hello");
+        System.out.print(s1 == s2);
+    }
+}</code></pre>
+    </div>
+
+    <!-- 문제 19 -->
+    <div class="question" id="q19">
+        <div class="q-title">문제 19. 파이썬(Python) 함수 및 매개변수</div>
+        <p>다음 Python 코드의 출력 값을 작성하시오.</p>
+        <pre><code>def func(a, b=3):
+    return a + b
+print(func(2) + func(1, 5))</code></pre>
+    </div>
+
+    <!-- 문제 20 -->
+    <div class="question" id="q20">
+        <div class="q-title">문제 20. 정보보안 암호화 알고리즘 용어</div>
+        <p>대칭키 암호화 방식 중 하나로, AES(Advanced Encryption Standard)의 이전 표준이었으며 64비트 블록 크기에 3개의 키를 사용하여 3번 대칭 암호화를 수행하는 알고리즘 영문 약자를 쓰시오.</p>
+    </div>
+
+
+    <!-- ================= 정답 및 해설 영역 ================= -->
+    <h2>정답 및 해설 모음</h2>
+    <table class="answer-table">
+        <tr>
+            <th style="width: 10%;">문항</th>
+            <th style="width: 35%;">정답</th>
+            <th style="width: 55%;">해설</th>
+        </tr>
+        <tr>
+            <td>1번</td>
+            <td><strong>6</strong></td>
+            <td><div class="explanation-text">배열 요소 중 짝수인 2와 4의 합인 6이 누적 출력됩니다.</div></td>
+        </tr>
+        <tr>
+            <td>2번</td>
+            <td><strong>15, 15</strong></td>
+            <td><div class="explanation-text">*(ptr+1)은 arr[1]이며 10에서 5를 더해 15가 되고, ptr++ 후 *ptr은 arr[1]을 가리키므로 둘 다 15가 출력됩니다.</div></td>
+        </tr>
+        <tr>
+            <td>3번</td>
+            <td><strong>Factory Method</strong></td>
+            <td><div class="explanation-text">객체 생성을 서브클래스가 담당하도록 위임하는 팩토리 메서드 패턴입니다.</div></td>
+        </tr>
+        <tr>
+            <td>4번</td>
+            <td><strong>19</strong></td>
+            <td><div class="explanation-text">"Information"(11글자) 뒤에 "Security"(8글자)가 결합되어 총 길이는 19가 됩니다.</div></td>
+        </tr>
+        <tr>
+            <td>5번</td>
+            <td><strong>체크포인트 회복 기법 (Checkpoint Recovery)</strong></td>
+            <td><div class="explanation-text">체크포인트를 기준으로 로그를 분석하여 복구하는 기법입니다.</div></td>
+        </tr>
+        <tr>
+            <td>6번</td>
+            <td><strong>타이머 런아웃 (Timer Runout) 또는 시분할 만료</strong></td>
+            <td><div class="explanation-text">할당 시간 만료로 인해 실행 상태에서 준비 상태로 전이되는 현상입니다.</div></td>
+        </tr>
+        <tr>
+            <td>7번</td>
+            <td><strong>부여: GRANT / 회수: REVOKE</strong></td>
+            <td><div class="explanation-text">데이터 제어 언어(DCL)의 권한 부여 및 회수 명령어입니다.</div></td>
+        </tr>
+        <tr>
+            <td>8번</td>
+            <td><strong>9</strong></td>
+            <td><div class="explanation-text">1부터 5 사이의 홀수(1, 3, 5)의 합인 9가 출력됩니다.</div></td>
+        </tr>
+        <tr>
+            <td>9번</td>
+            <td><strong>UDP</strong></td>
+            <td><div class="explanation-text">비연결형 및 빠른 속도를 특징으로 하는 전송 계층 프로토콜입니다.</div></td>
+        </tr>
+        <tr>
+            <td>10번</td>
+            <td><strong>시간적 응집도 (Temporal Cohesion)</strong></td>
+            <td><div class="explanation-text">동일한 시간대에 처리되는 기능들이 모여 있는 응집도입니다.</div></td>
+        </tr>
+        <tr>
+            <td>11번</td>
+            <td><strong>(조인 결과 행 수)</strong></td>
+            <td><div class="explanation-text">조건에 일치하는 조인 튜플의 총 개수입니다.</div></td>
+        </tr>
+        <tr>
+            <td>12번</td>
+            <td><strong>AB</strong></td>
+            <td><div class="explanation-text">자식 클래스 객체 생성 시 부모 생성자(A)가 먼저 실행된 후 자식 생성자(B)가 실행됩니다.</div></td>
+        </tr>
+        <tr>
+            <td>13번</td>
+            <td><strong>XSS (Cross-Site Scripting)</strong></td>
+            <td><div class="explanation-text">악성 스크립트를 웹 페이지에 삽입하여 실행하는 취약점입니다.</div></td>
+        </tr>
+        <tr>
+            <td>14번</td>
+            <td><strong>Class B (클래스 B)</strong></td>
+            <td><div class="explanation-text">사설 IP 대역 중 172.16.0.0 ~ 172.31.255.255는 B클래스 사설 대역에 해당합니다.</div></td>
+        </tr>
+        <tr>
+            <td>15번</td>
+            <td><strong>스탬프 결합도 (Stamp Coupling)</strong></td>
+            <td><div class="explanation-text">자료구조 전체가 전달되는 형태의 결합도입니다.</div></td>
+        </tr>
+        <tr>
+            <td>16번</td>
+            <td><strong>100</strong></td>
+            <td><div class="explanation-text">조건식이 참이므로 x가 10이 되고, 10 * 10 = 100이 출력됩니다.</div></td>
+        </tr>
+        <tr>
+            <td>17번</td>
+            <td><strong>조건 커버리지 (Condition Coverage)</strong></td>
+            <td><div class="explanation-text">개별 조건식이 참/거짓을 한 번씩 갖도록 테스트하는 커버리지입니다.</div></td>
+        </tr>
+        <tr>
+            <td>18번</td>
+            <td><strong>false</strong></td>
+            <td><div class="explanation-text">`==` 연산자는 객체의 주소 값을 비교하므로 인스턴스가 다른 두 문자열 비교 시 false가 반환됩니다.</div></td>
+        </tr>
+        <tr>
+            <td>19번</td>
+            <td><strong>11</strong></td>
+            <td><div class="explanation-text">func(2)는 2 + 3 = 5, func(1, 5)는 1 + 5 = 6이 되어 5 + 6 = 11이 출력됩니다.</div></td>
+        </tr>
+        <tr>
+            <td>20번</td>
+            <td><strong>3DES (Triple DES)</strong></td>
+            <td><div class="explanation-text">DES를 3번 적용하여 보안성을 높인 대칭키 암호화 방식입니다.</div></td>
+        </tr>
+    </table>
+
+</div>
+</body>
+</html>
