@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>정보처리기사 핵심 이론 - 네트워크 주요 기술</title>
+    <style>
+        body { font-family: 'Malgun Gothic', sans-serif; line-height: 1.6; margin: 30px; background-color: #f7f9fa; color: #333; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); position: relative; }
+        .home-btn { position: absolute; top: 30px; left: 30px; background: #3498db; color: white; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-size: 0.9em; font-weight: bold; }
+        .home-btn:hover { background: #2980b9; }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 3px solid #3498db; padding-bottom: 20px; margin-bottom: 30px; margin-top: 20px; }
+        h2 { color: #2c3e50; margin-top: 40px; border-bottom: 2px solid #bdc3c7; padding-bottom: 8px; font-size: 1.2em; }
+        .concept-box { margin-bottom: 25px; padding: 20px; border: 1px solid #e1e8ed; border-radius: 8px; background: #ffffff; }
+        .concept-title { font-weight: bold; color: #2980b9; font-size: 1.1em; margin-bottom: 10px; }
+        p { margin: 8px 0; }
+        code { background: #f1f2f6; color: #d63031; padding: 2px 6px; border-radius: 4px; font-family: Consolas, monospace; font-size: 0.95em; border: 1px solid #dfe4ea; }
+        ul { margin: 8px 0; padding-left: 20px; }
+        li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="index.html" class="home-btn">← 메인으로</a>
+    <h1>네트워크 주요 IP 및 부가 기술 이론</h1>
+    <p style="text-align: center; color: #7f8c8d; margin-bottom: 40px;">정보처리기사 실기 시험에 자주 출제되는 핵심 네트워크 프로토콜 및 기술 정리입니다.</p>
+
+    <!-- 1. NAT -->
+    <div class="concept-box">
+        <div class="concept-title">1. NAT (Network Address Translation, 네트워크 주소 변환)</div>
+        <p><strong>개념:</strong> 사설 IP 주소를 공인 IP 주소로 변환해주는 네트워크 기술입니다.</p>
+        <p><strong>주요 특징:</strong></p>
+        <ul>
+            <li>부족한 IPv4 공인 주소를 효율적으로 고갈 없이 사용할 수 있게 해줍니다.</li>
+            <li>내부 네트워크의 사설 IP를 숨길 수 있어 **보안성 향상** 효과가 있습니다.</li>
+        </ul>
+    </div>
+
+    <!-- 2. DNS -->
+    <div class="concept-box">
+        <div class="concept-title">2. DNS (Domain Name System, 도메인 이름 시스템)</div>
+        <p><strong>개념:</strong> 사람이 읽기 쉬운 도메인 이름(예: <code>www.example.com</code>)을 컴퓨터가 이해할 수 있는 IP 주소(예: <code>192.0.2.1</code>)로 변환해 주는 시스템입니다.</p>
+        <p><strong>주요 특징:</strong></p>
+        <ul>
+            <li>계층적인 분산 데이터베이스 구조로 이루어져 있습니다.</li>
+            <li>기본적으로 <strong>UDP 53번 포트</strong>를 사용합니다. (영역 전송 등 대용량 데이터는 TCP 사용)</li>
+        </ul>
+    </div>
+
+    <!-- 3. QoS -->
+    <div class="concept-box">
+        <div class="concept-title">3. QoS (Quality of Service, 서비스 품질)</div>
+        <p><strong>개념:</strong> 네트워크 트래픽 우선순위를 지정하여, 데이터 유실이나 지연(Latency)에 민감한 서비스(예: 실시간 음성 통화, 동영상 스트리밍)에 일정한 수준의 성능을 보장해 주는 기술입니다.</p>
+        <p><strong>주요 관리 지표:</strong> 대역폭(Bandwidth), 지연 시간(Latency), 패킷 손실률(Packet Loss) 등</p>
+    </div>
+
+    <!-- 4. VPN -->
+    <div class="concept-box">
+        <div class="concept-title">4. VPN (Virtual Private Network, 가상 사설 통신망)</div>
+        <p><strong>개념:</strong> 공중 네트워크(인터넷)를 마치 전용선처럼 사용하여 안전하게 데이터를 주고받을 수 있도록 암호화 터널링 기술을 제공하는 네트워크 기술입니다.</p>
+        <p><strong>주요 특징:</strong> IPsec, SSL/TLS 등의 프로토콜을 기반으로 데이터를 암호화하여 외부 감청이나 해킹으로부터 보호합니다.</p>
+    </div>
+
+    <!-- 5. DHCP -->
+    <div class="concept-box">
+        <div class="concept-title">5. DHCP (Dynamic Host Configuration Protocol, 동적 호스트 구성 프로토콜)</div>
+        <p><strong>개념:</strong> 네트워크에 접속하는 호스트(PC, 스마트폰 등)에게 IP 주소, 서브넷 마스크, 게이트웨이 주소 등을 **자동으로 할당**해 주는 프로토콜입니다.</p>
+        <p><strong>주요 특징:</strong></p>
+        <ul>
+            <li>관리자가 수동으로 일일이 IP를 설정할 필요가 없어 관리가 편리합니다.</li>
+            <li>IP 주소 충돌을 방지하고 유휴 IP를 효율적으로 회수 및 재할당할 수 있습니다.</li>
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>
