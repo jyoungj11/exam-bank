@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF 뷰어 페이지</title>
+    <style>
+        body { font-family: 'Malgun Gothic', sans-serif; margin: 0; padding: 20px; background: #f7f9fa; }
+        .container { max-width: 900px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .pdf-viewer { width: 100%; height: 800px; border: none; border-radius: 6px; }
+        .home-btn { display: inline-block; margin-bottom: 20px; background: #3498db; color: white; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="index.html" class="home-btn">← 메인으로</a>
+    <h2>📄 정보처리기사 요약본 PDF</h2>
+    
+    <!-- 웹페이지 안에서 PDF 바로 보기 -->
+    <embed src="26-3-compressed_v1-0.pdf" type="application/pdf" class="pdf-viewer">
+</div>
+
+</body>
+</html>
