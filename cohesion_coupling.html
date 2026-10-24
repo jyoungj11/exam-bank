@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정보처리기사 핵심 이론 - 응집도와 결합도</title>
+    <style>
+        body { 
+            font-family: 'Malgun Gothic', sans-serif; 
+            line-height: 1.6; 
+            margin: 30px; 
+            background-color: #f7f9fa; 
+            color: #333; 
+        }
+        .container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            background: #fff; 
+            padding: 40px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+            position: relative; 
+        }
+        .home-btn { 
+            position: absolute; 
+            top: 30px; 
+            left: 30px; 
+            background: #3498db; 
+            color: white; 
+            padding: 8px 15px; 
+            border-radius: 6px; 
+            text-decoration: none; 
+            font-size: 0.9em; 
+            font-weight: bold; 
+        }
+        .home-btn:hover { 
+            background: #2980b9; 
+        }
+        h1 { 
+            color: #2c3e50; 
+            text-align: center; 
+            border-bottom: 3px solid #3498db; 
+            padding-bottom: 20px; 
+            margin-bottom: 30px; 
+            margin-top: 20px; 
+            font-size: 1.6rem;
+        }
+        h2 { 
+            color: #2c3e50; 
+            margin-top: 40px; 
+            border-bottom: 2px solid #bdc3c7; 
+            padding-bottom: 8px; 
+            font-size: 1.2em; 
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 35px;
+            background: #111;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            display: block;
+            margin: 0 auto;
+        }
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+        th, td {
+            border: 1px solid #ced6e0;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f2f6;
+            color: #2f3542;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .badge-good { color: #27ae60; font-weight: bold; }
+        .badge-bad { color: #c0392b; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="home-btn">← 메인으로</a>
+        <h1>응집도 (Cohesion) 와 결합도 (Coupling)</h1>
+        <p style="text-align: center; color: #7f8c8d; margin-bottom: 30px;">소프트웨어 설계 시 모듈의 독립성을 판단하는 가장 중요한 기준입니다.</p>
+
+        <!-- 최상단 이미지 영역 -->
+        <div class="image-container">
+            <img src="Cohesion and Coupling.jpg" alt="응집도와 결합도 비교 요약">
+        </div>
+
+        <!-- 1. 응집도 설명 -->
+        <h2>1. 응집도 (Cohesion) — <span class="badge-good">높을수록 좋음 (↑)</span></h2>
+        <p>모듈 내부의 요소들이 서로 얼마나 밀접하게 연관되어 있는지(단일 책임을 잘 수행하는지)를 나타내는 정도입니다.</p>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">단계 (높은순)</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. 기능적 (Functional)</strong></td>
+                        <td>모듈 내부의 모든 기능 요소가 단일한 명확한 목적(기능)을 위해 수행됨 <span class="badge-good">(최고!)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. 순차적 (Sequential)</strong></td>
+                        <td>동일한 입력 데이터를 기반으로 한 활동의 출력이 다음 활동의 입력으로 순차적으로 사용됨</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. 교환적 / 통신적 (Communicational)</strong></td>
+                        <td>동일한 입력과 출력을 사용하여 서로 다른 기능을 독립적으로 수행함</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. 절차적 (Procedural)</strong></td>
+                        <td>모듈이 다수의 관련 기능을 가질 때 순차적으로 실행되는 형태</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5. 시간적 (Temporal)</strong></td>
+                        <td>특정 시간(초기화, 종료 등)에 처리되어야 하는 여러 기능을 모아둔 형태</td>
+                    </tr>
+                    <tr>
+                        <td><strong>6. 논리적 (Logical)</strong></td>
+                        <td>유사한 성격이나 특정 형태의 취급 데이터를 단순히 묶어서 처리함</td>
+                    </tr>
+                    <tr>
+                        <td><strong>7. 우연적 (Coincidental)</strong></td>
+                        <td>모듈 내부 요소들이 서로 아무런 연관 관계가 없음 <span class="badge-bad">(최악)</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 2. 결합도 설명 -->
+        <h2>2. 결합도 (Coupling) — <span class="badge-bad">낮을수록 좋음 (↓)</span></h2>
+        <p>모듈과 모듈 사이에 서로 의존하고 있는 정도를 나타내며, 낮을수록 모듈 간 간섭이 적어 유지보수가 쉽습니다.</p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">단계 (낮은순)</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. 자료 (Data)</strong></td>
+                        <td>모듈 간의 인터페이스가 단순한 데이터(값)만 전달됨 <span class="badge-good">(최고!)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. 스탬프 (Stamp)</strong></td>
+                        <td>자료구조(객체, 배열 등) 전체가 전달되어 그중 일부 필드만 사용함</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. 제어 (Control)</strong></td>
+                        <td>제어 요소(플래그 등)가 전달되어 다른 모듈의 내부 실행 흐름을 제어함</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. 외부 (External)</strong></td>
+                        <td>어떤 외부 모듈에서 선언된 데이터(변수 등)를 여러 모듈이 공유하여 참조함</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5. 공통 (Common)</strong></td>
+                        <td>전역 변수(Global Variable)를 여러 모듈이 함께 공유하고 수정함</td>
+                    </tr>
+                    <tr>
+                        <td><strong>6. 내용 (Content)</strong></td>
+                        <td>한 모듈이 다른 모듈의 내부 데이터나 제어 코드를 직접 수정하거나 참조함 <span class="badge-bad">(최악)</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</body>
+</html>
